@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math Facts</title>
+	<script type="text/javascript" src="math-logic.js"></script>
+
+	<style type="text/css">
+		body{background: whitesmoke;}
+		.page{height: 11in; width: 8.5in; padding: 1in; background: white; margin: 3em auto 1em;}
+		.math-container{display: grid; grid-template-columns: repeat(5, 1fr); font-size: 25px; grid-gap: 105px 50px; font-family: sans-serif; align-items: flex-start; margin-top: 3em;}
+		.numbers{display: grid; grid-template-columns: 2fr 5fr; border-bottom: 2px solid black; width: 50px; text-align: center; margin: 0 auto;}
+		.plus{grid-area: 2 / 1 / 2 / 2;}
+		.top{grid-area: 1 / 2 / 1 / 2;}
+		.bottom{grid-area: 2 / 2 / 2 / 2;}
+	</style>
+</head>
+<body>
+	<div class="no-print">
+		<label for="range">How many math facts?</label>
+		<input type="range" id="range" min="5" max="30" value="5" oninput="outputNum(this)">
+		<number>5</number>
+		<button onclick="runMath();">Run Numbers</button>
+	</div>
+	<div class="page">
+		Name: ________________________________
+
+		<div class="math-container"></div>
+	</div>
+</body>
+</html>
