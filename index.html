@@ -14,6 +14,10 @@
 		.plus{grid-area: 2 / 1 / 2 / 2;}
 		.top{grid-area: 1 / 2 / 1 / 2;}
 		.bottom{grid-area: 2 / 2 / 2 / 2;}
+		@media print{
+			.no-print{display: none;}
+			.page{margin: 0 auto;}
+		}
 	</style>
 </head>
 <body>
@@ -21,6 +25,13 @@
 		<label for="range">How many math facts?</label>
 		<input type="range" id="range" min="5" max="30" value="5" oninput="outputNum(this)">
 		<number>5</number>
+		<p>Math Fact Type</p>
+		<ul>
+			<li><input id="add" type="radio" checked name="math-type">Addition</li>
+			<li><input id="subt" type="radio" name="math-type">Subtraction</li>
+			<li><input id="mult" type="radio" name="math-type">Multiplication</li>
+
+		</ul>
 		<button onclick="runMath();">Run Numbers</button>
 	</div>
 	<div class="page">
